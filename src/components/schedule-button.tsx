@@ -20,8 +20,8 @@ export function ScheduleButton({ phone, message }: IScheduleButton) {
 
 		const encoded = encodeURIComponent(message)
 		WhatsAppLink += `?text=${encoded}`
-		return setLink(WhatsAppLink)
-	})
+		setLink(WhatsAppLink)
+	}, [phone, message])
 
 	return (
 		<Button variant="outline">
