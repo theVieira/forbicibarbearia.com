@@ -12,7 +12,7 @@ export function HomeSection() {
 					<p className="text-4xl text-yellow-600">Forbici Barbearia</p>
 					<p className="text-md text-zinc-400">Sua barbearia por assinatura</p>
 				</span>
-				<ScheduleButton phone="(69) 99362-5749" />
+				<ScheduleButton phone="+55 (69) 99362-5749" />
 			</div>
 		</section>
 	)

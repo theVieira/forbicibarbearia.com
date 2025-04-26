@@ -18,7 +18,7 @@ interface IUnity {
 
 const Unitys: IUnity[] = [
 	{
-		phone: '(69) 99362-5749',
+		phone: '+55 (69) 99362-5749',
 		location: {
 			neighborhood: 'Centro',
 			number: '',
