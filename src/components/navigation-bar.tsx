@@ -27,7 +27,7 @@ const NavigationItems: NavigationItem[] = [
 
 export function NavigationBar() {
 	return (
-		<nav className="px-12 flex items-center justify-between">
+		<nav className="px-12 flex items-center justify-between fixed w-full z-10 backdrop-blur-sm">
 			<Image
 				src="/logo.png"
 				alt="logo"
