@@ -1,5 +1,4 @@
 import { ScheduleButton } from '@/components/schedule-button'
-import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Phone } from 'lucide-react'
 import Image from 'next/image'
