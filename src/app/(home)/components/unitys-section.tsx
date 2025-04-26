@@ -1,6 +1,9 @@
+'use client'
+
 import { ScheduleButton } from '@/components/schedule-button'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
-import { Phone } from 'lucide-react'
+import { toast } from '@/hooks/use-toast'
+import { Copy, Phone } from 'lucide-react'
 import Image from 'next/image'
 
 interface IUnity {
@@ -32,6 +35,11 @@ const Unitys: IUnity[] = [
 ]
 
 export function UnitysSection() {
+	function copyToClipboard(phone: string) {
+		navigator.clipboard.writeText(phone)
+		toast({ description: 'Copiado para a área de transferência' })
+	}
+
 	return (
 		<section className="p-6">
 			<p className="text-2xl text-zinc-300 text-center">Nossas unidades</p>
@@ -58,11 +66,15 @@ export function UnitysSection() {
 							<CardContent>
 								<p>{neighborhood}</p>
 								<p className="text-zinc-400">
-									{street}, {number}
+									{street} {number && <>, number</>}
 								</p>
-								<p className="flex items-center gap-2">
+								<p
+									className="flex items-center gap-2"
+									onClick={() => copyToClipboard(phone)}
+								>
 									<Phone size={16} />
 									{phone}
+									<Copy size={16} />
 								</p>
 							</CardContent>
 							<CardFooter>
